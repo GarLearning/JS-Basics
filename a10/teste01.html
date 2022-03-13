@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font:normal 18pt Arial; 
+            background: darksalmon;
+        }
+        input{
+            font:normal 18pt Arial;
+            width: 120px;
+        }
+        h1{
+            font:caption 18pt arial;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Operações.
+    </h1>
+    <input type="number" name="txtn1" id="txtn1">  
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="number" name="txtn3" id="txtn3"><br/>
+    <input type="button" value="somar" onclick="somar()">
+    <div id = "res">
+        Resultado
+    </div>
+    <script>
+        function somar(){
+            var cn1 = document.getElementById("txtn1")
+            var cn2 = document.getElementById("txtn2")
+            var cn3 = document.getElementById("txtn3")
+            var res = document.getElementById("res")
+
+            var n1 = Number(cn1.value)
+            var n2 = Number(cn2.value)
+            var n3 = Number(cn3.value)
+
+            var delta = n2**2 - 4 * n1 * n3
+            var raiz_d = delta ** (1/2)
+            var x1 = (-n2 + raiz_d) / 2 * n1
+            var x2 = (-n2 - raiz_d) / 2 * n1
+
+            res.innerText = `${x1}, ${x2}`
+        }
+    </script>
+</body>
+</html>

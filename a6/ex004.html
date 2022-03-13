@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa.</title>
+    <style>
+        body{
+            background-color: rgb(140, 92, 185);
+            color: rgb(31, 97, 117);
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>H1 diz a respeito ao titulo.</h1>
+    <p>P determina um paragrafo</p>
+    <script>
+        /*ATRIBUTO E METODOS :
+            n.length == quantos caracteres a string tem
+            n.toUpperCase() == transforma tudo para maiusculas
+            n.toLowerCase() == transforma tudo para minusculas
+        */
+        var nome = window.prompt("Digite seu nome: ")
+        document.write(`Seu nome é <strong>${nome}</strong> e tem ${nome.length} letras.<br/>`)
+        document.writeln(`Seu nome em maiusculas <strong>${nome.toUpperCase()}</strong>.<br/>`)
+        document.writeln(`Seu nome em minusculas <strong>${nome.toLowerCase()}</strong>.`)
+
+    </script>
+</body>
+</html>

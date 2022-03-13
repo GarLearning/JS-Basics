@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(228, 218, 218);
+        }
+        input#txtn1, input#txtn2{
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de medição de velocidade</h1>
+
+    Velocidade do veiculo: <input type="number" name="txtn1" id="txtn1"> km/h<br/>
+    Velocidade da rodovia: <input type="number" name="txtn2" id="txtn2"> km/h<br/>
+  
+    <input type="button" value="Validação" onclick = "calcular()">
+
+    <div id = "result"></div>
+    
+    <script>
+        function calcular() {
+
+            var velo1 = document.querySelector("input#txtn1")
+            var velo_veiculo = Number(velo1.value)
+            
+            var velo2 = document.querySelector("input#txtn2")
+            var velo_rodovia = Number(velo2.value)
+
+            var res = document.querySelector("div#result")
+
+            if (velo_veiculo > velo_rodovia){
+                res.innerHTML = `Velocidade: ${velo_veiculo}km/h. Está acima da permitida.`
+            }
+            else{ 
+                res.innerHTML = `Dirija sempre com cuidado.` 
+            }
+        }
+    </script>
+</body>
+</html>

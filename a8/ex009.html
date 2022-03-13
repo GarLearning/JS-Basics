@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>titulo</title>
+    <style>
+        body{
+            background-color: rgb(140, 92, 185);
+            color: rgb(31, 97, 117);
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*operadores ternarios são compostos de 3 blocos ?:
+        1ºteste : True ou False.
+        2ºTrue : o que acontece quando o teste pe verdadeiro.
+        3ºFalse : o que acontece quando o teste for falso.
+        obs:. tambem da para fazer dentro de variavel, fazendo teste dentro dela.*/
+        var nota = 8
+        document.write(`nota == 8 - nota >= 7 ? "aprovado" : "reprovado" -> resultado: ${nota >= 7 ? "aprovado" : "reprovado"}</br>`)
+        var nota = 5
+        document.write(`nota == 5 - nota >= 7 ? "aprovado" : "reprovado" -> resultado: ${nota >= 7 ? "aprovado" : "reprovado"}</br>`)
+        var idade = 17
+        var m_m = idade >= 18 ? "maior" : "menor" 
+        document.write(m_m)
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa.</title>
+    <style>
+        body{
+            background-color: rgb(140, 92, 185);
+            color: rgb(31, 97, 117);
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(35, 0, 131);
+        }
+    </style>
+</head>
+<body>
+    <h1>H1 diz a respeito ao titulo.
+    <p>P determina um paragrafo</p>
+    <script>
+        var n = 3.14159265358979323846
+        document.write(`O numero é : ${n}<br/>`)
+        document.write(`Limitação de casas : ${n.toFixed(2)}<br/>`)// limita-se me 2 casas
+        document.write(`Trocar . por , : ${n.toFixed(2).replace(".", ",")}<br/>`)//troca o ponto para uma virgula
+        document.write(`Valor monetario PT-BR : ${n.toLocaleString("pt-br", {style: "currency",currency: "BRL"})}`)
+            //isso faz com que o numero fique em uma formatação monetaria deacordo com a localidade e moeda especificada
+    </script>
+</body>
+</html>

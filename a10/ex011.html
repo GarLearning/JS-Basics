@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area{
+            font: normal 15pt Arial;
+            background: darkgray;
+            color: darkgreen;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id = "area"><!--onclick = "clicar()" onmouseenter = "entrar()" onmouseout = "sair()"-->
+        Interaja...
+    </div>
+
+    <script>
+        var mud = document.getElementById("area")
+        // ao invez de usar o comentario a cima na dive html para detecção de eventos usa-se no script como abaixo.
+        mud.addEventListener("click", clicar)
+        mud.addEventListener("mouseenter", entrar)
+        mud.addEventListener("mouseout", sair)
+
+        function clicar(){
+            mud.innerText = "Clicou."
+            mud.style.background = "tomato"
+        }
+        
+        function entrar(){
+            mud.innerText = "Entrou."
+        }
+
+        function sair(){
+            mud.innerText = "Saiu."
+            mud.style.background = "darkgray"
+        } 
+    </script>
+</body>
+</html>

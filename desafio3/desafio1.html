@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analise de valores</title>
+    <link rel="stylesheet" href="estilo.css">    
+</head>
+<body>
+    <header>
+        <h1>Analise de valores</h1>
+    </header>
+    <section>
+        <ul class="center"> 
+            Números(entre 1 e 100)
+            <input type="number" name="num" id="num" class="box_input_range">
+            <input type="button" value="adicionar" onclick="adicionar()">
+        </ul>
+        <div class="menu">       
+            <ul class="list">
+                <select name="valores" id="valores" size="10" class="box_values_range">
+                </select>
+            </ul>
+
+            <ul class="finalizar">
+                <input type="button" value="Finalizar" onclick="finalizar()">
+            </ul>
+
+            <div id="res" class="res"></div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

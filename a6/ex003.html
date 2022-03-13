@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa.</title>
+    <style>
+        body{
+            background-color: rgb(140, 92, 185);
+            color: rgb(31, 97, 117);
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>H1 diz a respeito ao titulo.</h1>
+    <p>P determina um paragrafo</p>
+    <script>
+        var n1 = Number(window.prompt("Termo 1: "))
+        var n2 = Number(window.prompt("Termo 2: "))
+        //var soma = n1 + n2
+        //window.alert("soma = " + soma)
+
+        /*para usar conversao de tipo(para numero), usa-se Numver.parseInt(n) ou Number.parseFloat
+        ou Number fazendo com q a linguagem converta para o que seja melhor para a situação.
+            ja para string usa String(n) ou n.toString().*/     
+
+        window.alert(`soma = ${n1 + n2}`)
+        /*com a ultilização de ${}(template strings) juntamente com o uso das ``(crases), da para 
+        utilizar um print mais stilizado.*/   
+
+        // o sinal + (para strings) concatena mensagens, e o ${} permite a utilização nmeio do texto juntamente das ``
+    </script>
+</body>
+</html>

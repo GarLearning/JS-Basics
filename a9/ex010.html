@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <title>DOM - document object model</title>
+    <style>
+        body{
+            background: burlywood;
+            color: white;
+            font: normal 17pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando com DOM</h1>
+    <p>Resultado.</p>
+    <p>Aprendendo o uso de <strong>DOM</strong> em JavaScript.</p>
+    <div id="comando">Clique aqui.</div>
+    <textarea>DOM é um acronimo para (Document Object Model), Modelo de Objetos para documento.
+        Conjunto de objetos no navegador que da acesso a componentes dentro do site, presente quando se está rodando JS dentro do navegador.
+
+        Arvore DOM:
+            Começa dentro da janela do navegador(window), tendo dentro dela outros objetos.
+                location: Localização do site, pagina atual, anterior, url...
+                document: Documento atual.
+                    html
+                        head
+                           meta 
+                           title 
+                           ... 
+                        body
+                            h1 
+                            p
+                                strong  
+                            div 
+                            ...
+                history: Paginas anteriores e possiveis destinos.
+                Entre outros elementos.
+    </textarea>
+    <script>
+        //por Marca
+        var p1 = document.getElementsByTagName("p")[1]// usa o ultimo termo colocando 2(no caso de write)
+        document.write("</br>conteudo de p1: " + p1.innerText)//texto sem tags
+        document.write("</br>conteudo de p1: " + p1.innerHTML)//texto com tags
+        
+        p1.style.color = "black"
+
+        //por ID
+            var comando_i  = document.getElementById("comando")
+            //comando_i.innerText = "Abra aqui."
+            //ou
+            document.getElementById("comando").innerText = "Abra aqui."
+        //por Nome, Classe = segue o mesmo padrão de marca(tendo de declarar lemento com [])
+
+        //por Seletor
+        var comando_s = document.querySelector("div#comando")
+        //obs: para div se usa # e para classe .
+        comando_s.style.color = "red"
+    </script>
+</body>
+</html>

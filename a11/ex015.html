@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Nome do país: <input type="text" name="msg" id="msg">
+    <input type="button" value="Validação." onclick="pais()">
+
+    <div id = "pais"></div>
+    <div id = "nacionalidade"></div>
+    
+    <script>
+        function pais() {
+            var pais_origem = document.querySelector("input#msg").value
+            var pais = document.querySelector("div#pais")
+            var nacionalidade = document.querySelector("div#nacionalidade")
+
+            if (pais_origem  == "Brasil" | pais_origem  == "brasil") {
+                pais.innerHTML = `País: ${pais_origem}` 
+                nacionalidade.innerHTML = `Nacionalidade: Brasiçeiro.`
+            }
+            else{
+                pais.innerHTML = ""
+                nacionalidade.innerHTML = `Estrangeiro.`
+            }
+        }
+    </script>
+</body>
+</html>
